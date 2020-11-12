@@ -1,0 +1,17 @@
+{
+  "name": "currency-data-by-locale",
+  "version": "1.0.0",
+  "description": "retrieve currency data by locale",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "currency"
+  ],
+  "type": "module",
+  "author": "Joe Watts",
+  "license": "ISC"
+}
