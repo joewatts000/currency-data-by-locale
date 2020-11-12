@@ -22,72 +22,72 @@ const euroCountries = [
   'es-ES',
 ];
 
-const getLocationData = store => {
-  switch (store) {
+const getLocationData = languageCode => {
+  switch (languageCode) {
     case 'en-GB':
       return {
         currency: '£',
-        seperator: '.',
+        separator: '.',
       };
     case 'en-IN':
       return {
         currency: '₹',
-        seperator: ',',
+        separator: ',',
       };
     case 'pt-BR':
       return {
         currency: 'R$',
-        seperator: ',',
+        separator: ',',
       };
     case 'en-CA':
       return {
         currency: 'CDN$',
-        seperator: '.',
+        separator: '.',
       };
     case 'fr-CA':
       return {
         currency: 'CDN$',
-        seperator: '.',
+        separator: '.',
       };
     case 'jp-JP':
       return {
         currency: '￥',
-        seperator: ',',
+        separator: ',',
       };
     case 'es-MX':
       return {
         currency: '$',
-        seperator: ',',
+        separator: ',',
       };
     case 'en-AU':
       return {
         currency: '$',
-        seperator: '.',
+        separator: '.',
       };
     case 'en-SG':
       return {
         currency: 'S$',
-        seperator: '.',
+        separator: '.',
       };
     case 'tr-TR':
       return {
         currency: '₺',
-        seperator: ',',
+        separator: ',',
       };
     case 'en-AE':
       return {
         currency: 'AED',
-        seperator: ',',
+        separator: ',',
       };
     default:
-      if (euroCountries.indexOf(store) > -1) {
+      if (euroCountries.indexOf(languageCode) > -1) {
         return {
           currency: '€',
-          seperator: ',',
+          separator: ',',
         };
       }
       return {
-        seperator: '.',
+        separator: '.',
         currency: '$',
       };
   }
