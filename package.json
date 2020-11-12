@@ -13,5 +13,6 @@
   ],
   "type": "module",
   "author": "Joe Watts",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://github.com/joewatts000/currency-data-by-locale"
 }
