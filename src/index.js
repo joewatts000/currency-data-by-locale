@@ -49,7 +49,7 @@ const getLocationData = languageCode => {
         currency: 'CDN$',
         separator: '.',
       };
-    case 'jp-JP':
+    case 'ja-JP':
       return {
         currency: '￥',
         separator: ',',

@@ -1,6 +1,6 @@
 {
   "name": "currency-data-by-locale",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "retrieve currency data by locale",
   "main": "lib/index.js",
   "scripts": {
@@ -11,7 +11,9 @@
   "keywords": [
     "npm",
     "node",
-    "currency"
+    "currency",
+    "regional",
+    "regional currency data"
   ],
   "type": "module",
   "author": "Joe Watts",
