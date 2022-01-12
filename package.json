@@ -4,13 +4,11 @@
   "description": "retrieve currency data by locale",
   "main": "lib/index.js",
   "scripts": {
-    "jest": "cross-env NODE_ENV=commonjs ./node_modules/.bin/jest",
-    "jest:watch": "npm run jest -- --watch",
     "compile": "babel --presets es2015,stage-0 -d lib/ src/",
     "prepublish": "npm run compile",
     "lint": "./node_modules/.bin/eslint src",
     "lint-fix": "./node_modules/.bin/eslint --fix src --ext .js",
-    "test": "npm run lint && npm run jest",
+    "test": "npm run lint && NODE_ENV=tests && jest",
     "clean": "rimraf lib dist es",
     "build": "npm run build:commonjs && npm run build:umd && npm run build:umd:min && npm run build:es",
     "build:watch": "echo 'build && watch the COMMONJS version of the package - for other version, run specific tasks' && npm run build:commonjs:watch",
@@ -23,7 +21,7 @@
     "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup src/index.js --config --output dist/lite-router.min.js"
   },
   "jest": {
-    "testRegex": "(/.*\\.test.js)$"
+    "testRegex": "(/src/.*\\.test.js)$"
   },
   "pre-commit": [
     "test"
@@ -49,6 +47,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/eslint-parser": "^7.16.5",
+    "@babel/preset-env": "^7.16.8",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^27.4.6",
