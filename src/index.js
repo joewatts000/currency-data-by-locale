@@ -94,4 +94,3 @@ const getLocationData = languageCode => {
 };
 
 export default getLocationData;
-
